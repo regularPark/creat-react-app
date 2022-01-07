@@ -9,6 +9,7 @@ function Movie({coverImg, title, rating, genres, runtime,year, summary,id}){
     </h2>
     <h3>rating: {rating}</h3> 
     <h3>genres</h3>
+    <p>{summary.length > 235 ? `${summary.slice(0,235)}`: summary}</p>
     <ul>
         {genres && genres.map((g) => <li key={g}> {g} </li>) }
     </ul>    
