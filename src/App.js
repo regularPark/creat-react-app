@@ -4,8 +4,8 @@ import Detail from "./routes/Detail"
 
 function App () {
     return (
-    <Router>
-        <Routes>
+    <Router >
+        <Routes basename={process.env.PUBLIC_URL}>
             <Route path="/movie/:id" element={<Detail />}>
             </Route>
             <Route exact path="/" element={<Home/>}>
